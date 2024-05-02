@@ -1,0 +1,33 @@
+{
+  "positions": {
+    "Sapporo": [0.0, 0.0],
+    "Obihiro": [18.511, -1.506],
+    "Hakodate": [-6.235, -12.952],
+    "Asahikawa": [10.077, 6.940],
+    "Wakkanai": [3.265, 23.485],
+    "Abashiri": [29.033, 9.514],
+    "Kushiro": [30.314, -0.783],
+    "Nemuro": [42.320, 2.582],
+    "Oshamanbe": [-9.756, -5.558],
+    "Chitose": [3.009, -2.403],
+    "Higashimuroran": [-3.254, -7.201],
+    "Otaru": [-3.570, 1.290]
+  },
+    "distances": [
+      {"from": "Sapporo", "to": "Chitose", "distance": 28},
+      {"from": "Sapporo", "to": "Otaru", "distance": 33},
+      {"from": "Sapporo", "to": "Asahikawa", "distance": 80},
+      {"from": "Chitose", "to": "Higashimuroran", "distance": 63.5},
+      {"from": "Chitose", "to": "Obihiro", "distance": 139},
+      {"from": "Oshamanbe", "to": "Otaru", "distance": 175.5},
+      {"from": "Oshamanbe", "to": "Higashimuroran", "distance": 45.5},
+      {"from": "Oshamanbe", "to": "Hakodate", "distance": 75.5},
+      {"from": "Asahikawa", "to": "Abashiri", "distance": 223},
+      {"from": "Asahikawa", "to": "Wakkanai", "distance": 231},
+      {"from": "Abashiri", "to": "Kushiro", "distance": 218.5},
+      {"from": "Kushiro", "to": "Nemuro", "distance": 137},
+      {"from": "Obihiro", "to": "Kushiro", "distance": 89}
+    ]
+  }
+  
+  

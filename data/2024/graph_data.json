@@ -11,7 +11,8 @@
       "Oshamanbe": [-9.756, -5.558],
       "Chitose": [3.009, -2.403],
       "Higashimuroran": [-3.254, -7.201],
-      "Otaru": [-3.570, 1.290]
+      "Otaru": [-3.570, 1.290],
+      "Aomori": [-6.165, -22.397]
     },
     "distances": [
       {"from": "Sapporo", "to": "Chitose", "distance": 30.0},
@@ -26,7 +27,8 @@
       {"from": "Asahikawa", "to": "Wakkanai", "distance": 227.0},
       {"from": "Abashiri", "to": "Kushiro", "distance": 196.0},
       {"from": "Kushiro", "to": "Nemuro", "distance": 147.0},
-      {"from": "Obihiro", "to": "Kushiro", "distance": 139.5}
+      {"from": "Obihiro", "to": "Kushiro", "distance": 139.5},
+      {"from": "Aomori", "to": "Hakodate", "distance": 119.5}
     ]
   }
   

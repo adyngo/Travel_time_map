@@ -50,7 +50,7 @@ def plot_initial_optimized_positions(initial_positions, optimized_positions, edg
         nx.draw_networkx_nodes(G, pos=positions, ax=axes[ax_index], node_color=node_color, node_shape=node_shape, label=label, node_size=200)
         nx.draw_networkx_labels(G, pos=positions, ax=axes[ax_index], font_size=10, font_color='black', font_weight='bold')
         nx.draw_networkx_edges(G, pos=positions, ax=axes[ax_index], edge_color='gray')
-        axes[ax_index].set_title(f"{label} - Year: {config.get('year', 'unknown year')}")
+        axes[ax_index].set_title(f"{label} - Year: {config.get('year', 'unknown year')} - Angle weight: {config['optimization_params']['angle_weight']}")
 
     # Display the plot
     plt.show()
@@ -90,7 +90,7 @@ def load_all_data():
 def animate_yearly_optimizations(angle_weight):
     fig, ax = plt.subplots(figsize=(10, 6))
     plt.title("Optimized Positions Over Years")
-    G = nx.Graph()  # Initialize G outside the update function
+    G = nx.Graph()  
     positions, distances, edge_lists = load_all_data()
     years = list(positions.keys())
     
@@ -115,7 +115,7 @@ def animate_yearly_optimizations(angle_weight):
         # Draw the graph with optimized positions
         nx.draw(G, optimized_positions, ax=ax, with_labels=False, node_color='lightblue', node_size=150)
         nx.draw_networkx_labels(G, optimized_positions, ax = ax,  font_size=10, font_color='black', font_weight='bold')
-        ax.set_title(f"Year: {year}")
+        ax.set_title(f"Year: {year}- Angle weight: {config['optimization_params']['angle_weight']}")
 
     # Create animation
     ani = animation.FuncAnimation(fig, update, frames=len(years), repeat=True)
@@ -168,7 +168,9 @@ def animate_iterations(positions_history, positions, distances):
         G.add_edges_from(distances.keys())
         nx.draw(G, pos, ax=ax, with_labels=False, node_color='lightblue', node_size=250)
         nx.draw_networkx_labels(G, pos, ax = ax,  font_size=10, font_color='black', font_weight='bold')
-        ax.set_title(f"year: {year} Iterations: {frame}", fontsize = 10)
+        #ax.set_title(f"year: {year}- Angle weight: {config["optimization_params"]['angle_weight']}- Iterations: {frame}", fontsize = 10)
+        ax.set_title(f"year: {year}- Angle weight: {config['optimization_params']['angle_weight']}- Iterations: {frame}/{len(positions_history)}", fontsize=10)
+
         plt.pause(0.1 if frame > 0 else 5)  # Longer pause for the first frame
 
     ani = animation.FuncAnimation(fig, animate, frames=len(positions_history), repeat=True)

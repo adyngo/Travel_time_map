@@ -1,5 +1,7 @@
 # Visualization for Travel Time Map
 
+*"This is the repository for the 2024 project assignment in Remote Sensing and Geographic Information Systems."*
+
 ## Project Description
 **Visualization for Travel Time Map** is a Python project designed to visualize travel times by representing them as the lengths of edges between points on a 2D map. This project uses train travel time data from Hokkaido to create an optimized graphical representation of travel routes and durations.
 
